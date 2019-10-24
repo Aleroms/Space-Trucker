@@ -6,17 +6,22 @@ using UnityEngine.SceneManagement;
 //make sure to tag the player as "Player"
 public class LevelSelector : MonoBehaviour
 {
-	[SerializeField] private string dst_Level;
+	[SerializeField] private string dst_Level= null;
 
 	//changed Collider2D to Collider
 	//why wasn't error printed?
-	void OnTriggerEnter2D(Collider2D other)
+	void OnTriggerStay2D(Collider2D other)
 	{
-		print("Inside ");
-		if(other.CompareTag("Player"))
+		print("level:"+dst_Level);
+		if (other.CompareTag("Player"))
 		{
-			int sceneIndex = getSceneIndex(dst_Level);
-			SceneManager.LoadScene(sceneIndex);
+			if (dst_Level != null)
+			{
+				int sceneIndex = getSceneIndex(dst_Level);
+				SceneManager.LoadScene(dst_Level);
+			}
+			else
+				print("error:dst_lvl is null. Assign string to resolve.");
 		}
 	}
 	private int getSceneIndex(string lvl)
