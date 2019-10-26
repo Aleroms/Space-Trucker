@@ -55,6 +55,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Enemy\EnemyAI.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyGFX.cs" />
      <Compile Include="Assets\Scripts\Level\LevelSelector.cs" />
      <Compile Include="Assets\Scripts\Menu\MainMenu.cs" />
      <Compile Include="Assets\Scripts\Menu\SettingsMenu.cs" />
@@ -286,6 +288,9 @@
  </Reference>
  <Reference Include="UnityEngine.XRModule">
  <HintPath>D:/Unity Hub/Installations/2019.2.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
+ </Reference>
+ <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+ <HintPath>C:/Users/Santiago/Desktop/SpaceTrucker/Space Truckers/SpaceTruckers/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>D:/Unity Hub/Installations/2019.2.9f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -632,6 +637,20 @@
  <Reference Include="System.Xml.Serialization">
  <HintPath>D:/Unity Hub/Installations/2019.2.9f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="AstarPathfindingProject.csproj">
+      <Project>{F544BD48-8387-6885-B73A-3F27B0E6F9FF}</Project>
+      <Name>AstarPathfindingProject</Name>
+    </ProjectReference>
+    <ProjectReference Include="PackageToolsEditor.csproj">
+      <Project>{2016E789-CA43-4A17-BA5F-146975DDB835}</Project>
+      <Name>PackageToolsEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="AstarPathfindingProjectEditor.csproj">
+      <Project>{AE484474-2C0C-F998-4AEE-890209AAC3A3}</Project>
+      <Name>AstarPathfindingProjectEditor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
