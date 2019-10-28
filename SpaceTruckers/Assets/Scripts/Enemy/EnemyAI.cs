@@ -5,60 +5,35 @@ using Pathfinding;
 
 public class EnemyAI : MonoBehaviour
 {
+	public AIPath aipath;
 	public Transform target;
-
-	public float speed = 2;
-	public float nextWaypointDistance = 3f;
-
-	Path path;
-	int currentWaypoint = 0;
-	bool reachedEndOfPath = false;
-
-	Seeker seeker;
-	Rigidbody2D rb;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-		seeker = GetComponent<Seeker>();
-		rb = GetComponent<Rigidbody2D>();
-
-		seeker.StartPath(rb.position, target.position, OnPathComplete);
-
-    }
-	void OnPathComplete(Path p)
+	
+	public float boundary = 8;
+	// Update is called once per frame
+	void Update()
 	{
-		if (!p.error)
-		{
-			path = p;
-			currentWaypoint = 0;
-		}
-	}
+		float target_x = target.localPosition.x;
+		float target_y = target.localPosition.y;
 
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-		if (path == null)
-		return;
-		
-		if(currentWaypoint >= path.vectorPath.Count)
+		if (aipath != null)
 		{
-			reachedEndOfPath = true;
-			return;
+			if (Mathf.Abs(target_x) < boundary)
+			{
+				aipath.canMove = true;
+			}
+			else
+				aipath.canMove = false;
+
 		}
 		else
-		{
-			reachedEndOfPath = false;
-		}
-		Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
-		Vector2 force = direction * speed * Time.deltaTime;
+			print("AIPath is null in EnemyAI.cs");
 
-		rb.AddForce(force);
 
-		float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
 
-		if (distance < nextWaypointDistance)
-			currentWaypoint++;
+		//Debug()
+		//prints targets [x,y]
+		//print("x:" + target.localPosition.x + "y:" + target.localPosition.y);
+		//prints this [x,y]
+		//print("*x:" + this.transform.localPosition.x + "*y:" + this.transform.localPosition.y);
 	}
-
 }
