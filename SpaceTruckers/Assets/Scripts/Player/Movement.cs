@@ -5,6 +5,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public float speed;
+    [SerializeField] bool inLevelSelector = false;
 
     //Needed to keep the player within camera boundaries.
     Vector2 playerSize;
@@ -31,7 +32,11 @@ public class Movement : MonoBehaviour
 
         gameObject.transform.position = new Vector2(transform.position.x + (h * speed), transform.position.y + (v * speed));
 
-        transform.position += Vector3.right * Time.deltaTime * 3;
+        if (!inLevelSelector)
+        {
+            transform.position += Vector3.right * Time.deltaTime * 3;
+
+        }
     }
 
 
