@@ -192,6 +192,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5413338326620229462, guid: ff2c44653062e094cb6b7f1a5144cdac,
+        type: 3}
+      propertyPath: inLevelSelector
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff2c44653062e094cb6b7f1a5144cdac, type: 3}
 --- !u!1 &626341156 stripped
@@ -237,6 +242,7 @@ GameObject:
   - component: {fileID: 938890300}
   - component: {fileID: 938890299}
   - component: {fileID: 938890298}
+  - component: {fileID: 938890301}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -309,6 +315,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &938890301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938890297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be665f70e5c0945df82c3d104e227be0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraSpeed: 10
+  inLevelSelector: 1
+  minX: 0
+  maxX: 10
+  minY: 0
+  maxY: 0
 --- !u!1001 &4208750261573685152
 PrefabInstance:
   m_ObjectHideFlags: 0
