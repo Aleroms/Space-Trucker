@@ -12,11 +12,12 @@ public class EnemyAI : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		float target_x = target.localPosition.x;
-		float target_y = target.localPosition.y;
-
-		if (aipath != null)
+		
+		if (aipath != null || target != null)
 		{
+			float target_x = target.localPosition.x;
+			float target_y = target.localPosition.y;
+
 			if (Mathf.Abs(target_x) < boundary)
 			{
 				aipath.canMove = true;
@@ -26,7 +27,7 @@ public class EnemyAI : MonoBehaviour
 
 		}
 		else
-			print("AIPath is null in EnemyAI.cs");
+			print("AIPath or target references are null in EnemyAI.cs\nread SpaceTruckersGDD.docx >> C# Script >> Enemy Sight for help");
 
 
 

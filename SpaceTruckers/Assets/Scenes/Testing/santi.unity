@@ -433,7 +433,7 @@ MonoBehaviour:
   heuristic: 2
   heuristicScale: 1
   threadCount: 1
-  maxFrameTime: 1
+  maxFrameTime: 10
   batchGraphUpdates: 0
   graphUpdateBatchingInterval: 0.2
   euclideanEmbedding:
@@ -523,12 +523,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 557832595987110171, guid: 07b7c35059e50b243988a2b1185f7f6b,
+        type: 3}
+      propertyPath: detailedGizmos
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 557832595987110167, guid: 07b7c35059e50b243988a2b1185f7f6b,
         type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 401760982}
     - target: {fileID: 557832595987110165, guid: 07b7c35059e50b243988a2b1185f7f6b,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 401760982}
+    - target: {fileID: 4319897969167079503, guid: 07b7c35059e50b243988a2b1185f7f6b,
         type: 3}
       propertyPath: target
       value: 
