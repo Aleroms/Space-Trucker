@@ -20,10 +20,10 @@ public class EnemySight : MonoBehaviour
 
 			if (Mathf.Abs(target_x) < boundary)
 			{
-				aipath.canMove = true;
+				aipath.canSearch = true;
 			}
 			else
-				aipath.canMove = false;
+				aipath.canSearch = false;
 
 		}
 		else

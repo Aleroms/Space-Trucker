@@ -27,7 +27,7 @@ public class EnemyAI : MonoBehaviour
 
 		}
 		else
-			print("AIPath or target references are null in EnemyAI.cs\nread SpaceTruckersGDD.docx >> C# Script >> Enemy Sight for help");
+		    print("AIPath or target references are null in EnemyAI.cs\nread SpaceTruckersGDD.docx >> C# Script >> Enemy Sight for help");
 
 
 
