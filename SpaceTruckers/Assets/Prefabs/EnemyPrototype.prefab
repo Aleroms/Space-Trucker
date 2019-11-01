@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 557832595987110164}
   - component: {fileID: 557832595987110165}
   - component: {fileID: 4319897969167079503}
+  - component: {fileID: 1679632038639069970}
   m_Layer: 0
   m_Name: EnemyPrototype
   m_TagString: Untagged
@@ -187,7 +188,7 @@ MonoBehaviour:
   maxAcceleration: -2.5
   rotationSpeed: 360
   slowdownDistance: 0.6
-  pickNextWaypointDist: 1.2
+  pickNextWaypointDist: 3
   endReachedDistance: 0.2
   alwaysDrawGizmos: 1
   slowWhenNotFacingTarget: 1
@@ -222,3 +223,29 @@ MonoBehaviour:
   aipath: {fileID: 557832595987110164}
   target: {fileID: 0}
   boundary: 8
+--- !u!61 &1679632038639069970
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557832595987110160}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2}
+  m_EdgeRadius: 0
