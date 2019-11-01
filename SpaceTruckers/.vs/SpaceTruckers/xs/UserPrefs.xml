@@ -1,11 +1,16 @@
 ﻿<Properties StartupConfiguration="{39D4250C-5AD8-D37E-3FEC-56EDD5A087B2}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player/Movement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GameManager.cs">
     <Files>
       <File FileName="Assets/Scripts/Menu/MainMenu.cs" Line="4" Column="14" />
-      <File FileName="Temp/UnityTempFile-4ea5265a6cb5047a6af7dd780f026929" Line="22" Column="6" />
-      <File FileName="Assets/Scripts/Player/Movement.cs" Line="38" Column="13" />
+      <File FileName="Assets/Scripts/Player/Movement.cs" Line="38" Column="1" />
       <File FileName="Assets/Scripts/ProgressBar.cs" Line="10" Column="24" />
       <File FileName="Assets/Scripts/Camera/CameraScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/EndBase.cs" Line="30" Column="1" />
+      <File FileName="Assets/Scripts/Cargo/Cargo.cs" Line="11" Column="1" />
+      <File FileName="Assets/Scripts/Cargo/CargoCounter.cs" Line="13" Column="44" />
+      <File FileName="Assets/Scripts/Cargo/PlayerCargo.cs" Line="1" Column="1" />
+      <File FileName="Assets/EndMenu.cs" Line="33" Column="28" />
+      <File FileName="Assets/GameManager.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
