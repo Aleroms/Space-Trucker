@@ -36,5 +36,6 @@ public class PlayerCargo : MonoBehaviour
 		{
 			CurrentCargo -= amount;
 		}
+	}
 
 }

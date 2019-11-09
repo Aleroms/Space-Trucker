@@ -207,17 +207,18 @@ PrefabInstance:
       propertyPath: speed
       value: 0.1
       objectReference: {fileID: 0}
-    - target: {fileID: 3789606164231762337, guid: ff2c44653062e094cb6b7f1a5144cdac,
-        type: 3}
-      propertyPath: m_CollisionDetection
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1900025178913761448, guid: ff2c44653062e094cb6b7f1a5144cdac,
         type: 3}
       propertyPath: cargo
       value: 
       objectReference: {fileID: 609356332}
-    m_RemovedComponents: []
+    - target: {fileID: 3789606164231762337, guid: ff2c44653062e094cb6b7f1a5144cdac,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5115699524518155770, guid: ff2c44653062e094cb6b7f1a5144cdac, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ff2c44653062e094cb6b7f1a5144cdac, type: 3}
 --- !u!1001 &84455636
 PrefabInstance:
@@ -313,6 +314,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07b7c35059e50b243988a2b1185f7f6b, type: 3}
+--- !u!1 &205670601 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5413338326620229459, guid: ff2c44653062e094cb6b7f1a5144cdac,
+    type: 3}
+  m_PrefabInstance: {fileID: 32086338}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &205670604 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1900025178913761448, guid: ff2c44653062e094cb6b7f1a5144cdac,
+    type: 3}
+  m_PrefabInstance: {fileID: 32086338}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205670601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c35534ddc60b494ea13e604622d4eef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &205670606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205670601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd518e300582e8c4f869b8751c687e7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  damage: 1
+  cargo: {fileID: 205670604}
 --- !u!1001 &330659679
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6109,6 +6143,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 557832595987110165, guid: 07b7c35059e50b243988a2b1185f7f6b,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 2072888952}
+    - target: {fileID: 4319897969167079503, guid: 07b7c35059e50b243988a2b1185f7f6b,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 2072888952}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07b7c35059e50b243988a2b1185f7f6b, type: 3}
 --- !u!1 &1167191599

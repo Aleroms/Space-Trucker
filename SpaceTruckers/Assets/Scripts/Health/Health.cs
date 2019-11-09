@@ -7,7 +7,7 @@ public class Health : MonoBehaviour
 	public int health = 100;
 	public int damage = 1;
 
-	PlayerCargo cargo;
+	public PlayerCargo cargo;
 	
 	void OnCollisionEnter2D(Collision2D other)
 	{
