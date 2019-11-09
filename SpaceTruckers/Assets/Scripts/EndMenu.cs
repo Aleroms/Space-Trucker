@@ -23,8 +23,9 @@ public class EndMenu : MonoBehaviour
 
     private void OnEnable()
     {
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
         int collectedCargo = GameObject.FindWithTag("Player").GetComponent<PlayerCargo>().CurrentCargo;
+        Debug.Log("Collected cargo " + collectedCargo);
         int calculatedReward = collectedCargo * GameManager.instance.rewardPerCollectedCargo;
         moneyAmountText.text = "Cargo collected: " + collectedCargo + " x $" + GameManager.instance.rewardPerCollectedCargo + " = $" + calculatedReward;
         GameManager.instance.IncreaseCurrencyBy(calculatedReward);

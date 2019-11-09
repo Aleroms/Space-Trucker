@@ -15,6 +15,8 @@ public class CameraScript : MonoBehaviour
     [SerializeField] float maxY;
 
 
+    float highestX = 0;
+
     private void Start()
     {
         player = GameObject.FindWithTag("Player");
@@ -25,7 +27,15 @@ public class CameraScript : MonoBehaviour
     {
         if (!inLevelSelector)
         {
-            transform.position += Vector3.right * Time.deltaTime * cameraSpeed;
+            //transform.position += Vector3.right * Time.deltaTime * cameraSpeed;
+
+            if (transform.position.x > highestX)
+                highestX = transform.position.x;
+
+            float x = Mathf.Clamp(player.transform.position.x, highestX, maxX);
+            float y = Mathf.Clamp(player.transform.position.y, minY, maxY);
+            transform.position = new Vector3(x, y, transform.position.z);
+
         }
         else
         {
