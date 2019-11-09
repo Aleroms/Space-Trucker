@@ -20,14 +20,20 @@ public class EndBase : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
+ 
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
+            Debug.Log("HIT END BASE");
+
             int cargoCount = collision.gameObject.GetComponent<PlayerCargo>().CurrentCargo;
             Debug.Log(cargoCount);
 
             endMenu.SetActive(true);
         }
     }
+
+
 }
