@@ -30,5 +30,11 @@ public class PlayerCargo : MonoBehaviour
     {
         CurrentCargo += 1;
     }
+	public void subtractCargo(int amount)
+	{
+		if (CurrentCargo > 0)
+		{
+			CurrentCargo -= amount;
+		}
 
 }

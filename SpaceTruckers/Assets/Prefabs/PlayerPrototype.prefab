@@ -10,10 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5413338326620229461}
   - component: {fileID: 5413338326620229460}
+  - component: {fileID: 5115699524518155770}
   - component: {fileID: 5413338326620229462}
+  - component: {fileID: 1900025178913761448}
   - component: {fileID: 3789606164231762337}
   - component: {fileID: 8984950989555605553}
-  - component: {fileID: 1900025178913761448}
   m_Layer: 0
   m_Name: PlayerPrototype
   m_TagString: Player
@@ -84,6 +85,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5115699524518155770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5413338326620229459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd518e300582e8c4f869b8751c687e7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!114 &5413338326620229462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,6 +112,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.25
   inLevelSelector: 0
+--- !u!114 &1900025178913761448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5413338326620229459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c35534ddc60b494ea13e604622d4eef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cargo: {fileID: 0}
+  startingCargo: 0
 --- !u!50 &3789606164231762337
 Rigidbody2D:
   serializedVersion: 4
@@ -145,17 +173,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
---- !u!114 &1900025178913761448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5413338326620229459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c35534ddc60b494ea13e604622d4eef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cargo: {fileID: 0}
-  startingCargo: 0
