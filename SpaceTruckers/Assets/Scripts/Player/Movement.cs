@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class Movement : MonoBehaviour
 {
     public float speed;
+
+	[SerializeField]
+	private float constantRightSpeed;
     [SerializeField] bool inLevelSelector = false;
 
     //Needed to keep the player within camera boundaries.
@@ -14,6 +18,8 @@ public class Movement : MonoBehaviour
     float maxX;
     float minY;
     float maxY;
+	[SerializeField, Tooltip("Handles Physics")]
+	private Rigidbody2D rBody;
 
     // Start is called before the first frame update
     void Start()
@@ -23,29 +29,35 @@ public class Movement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         UpdateCameraBoundaryValues();
 
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
 
-        gameObject.transform.position = new Vector2(transform.position.x + (h * speed), transform.position.y + (v * speed));
+		Debug.Log($"h:{h} V: {v}");
+		
+		Vector3 targetVel = new Vector2(h * speed, v * speed) * Time.fixedDeltaTime;
 
-        if (!inLevelSelector)
+		if (!inLevelSelector)
         {
-            transform.position += Vector3.right * Time.deltaTime * 3;
+			targetVel = new Vector2(targetVel.x + constantRightSpeed * Time.fixedDeltaTime, targetVel.y);
+			
+            //transform.position += Vector3.right * Time.deltaTime * 3;
 
         }
+
+		rBody.velocity = targetVel;
     }
 
 
     private void LateUpdate()
     {
-        Vector3 playerPos = transform.position;
-        playerPos.x = Mathf.Clamp(playerPos.x, minX, maxX);
-        playerPos.y = Mathf.Clamp(playerPos.y, minY, maxY);
-        transform.position = playerPos;
+        //Vector3 playerPos = transform.position;
+        //playerPos.x = Mathf.Clamp(playerPos.x, minX, maxX);
+        //playerPos.y = Mathf.Clamp(playerPos.y, minY, maxY);
+        //transform.position = playerPos;
     }
 
     private void UpdateCameraBoundaryValues()
