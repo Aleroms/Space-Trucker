@@ -427,6 +427,12 @@ PrefabInstance:
       objectReference: {fileID: 401760982}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07b7c35059e50b243988a2b1185f7f6b, type: 3}
+--- !u!50 &2006025230 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 3789606164231762337, guid: ff2c44653062e094cb6b7f1a5144cdac,
+    type: 3}
+  m_PrefabInstance: {fileID: 5413338325980988344}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &557832595847684195
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -597,6 +603,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5413338326620229462, guid: ff2c44653062e094cb6b7f1a5144cdac,
+        type: 3}
+      propertyPath: rBody
+      value: 
+      objectReference: {fileID: 2006025230}
+    - target: {fileID: 5413338326620229462, guid: ff2c44653062e094cb6b7f1a5144cdac,
+        type: 3}
+      propertyPath: speed
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 3789606164231762337, guid: ff2c44653062e094cb6b7f1a5144cdac,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff2c44653062e094cb6b7f1a5144cdac, type: 3}

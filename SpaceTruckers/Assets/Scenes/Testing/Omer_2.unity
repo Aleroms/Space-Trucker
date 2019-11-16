@@ -197,6 +197,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5413338326620229462, guid: ff2c44653062e094cb6b7f1a5144cdac,
+        type: 3}
+      propertyPath: rBody
+      value: 
+      objectReference: {fileID: 1679391546}
+    - target: {fileID: 5413338326620229462, guid: ff2c44653062e094cb6b7f1a5144cdac,
+        type: 3}
+      propertyPath: speed
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5413338326620229462, guid: ff2c44653062e094cb6b7f1a5144cdac,
+        type: 3}
+      propertyPath: constantRightSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3789606164231762337, guid: ff2c44653062e094cb6b7f1a5144cdac,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1900025178913761448, guid: ff2c44653062e094cb6b7f1a5144cdac,
         type: 3}
       propertyPath: cargo
@@ -3828,6 +3848,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a720674dea6e84199941be49caad82c1, type: 3}
+--- !u!50 &1679391546 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 3789606164231762337, guid: ff2c44653062e094cb6b7f1a5144cdac,
+    type: 3}
+  m_PrefabInstance: {fileID: 32086338}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1724745693 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8618290416577318929, guid: 475aaf251d2c95d4cbd54dc16d9496f8,
