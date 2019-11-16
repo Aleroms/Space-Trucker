@@ -36,7 +36,7 @@ public class Movement : MonoBehaviour
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
 
-		Debug.Log($"h:{h} V: {v}");
+		//Debug.Log($"h:{h} V: {v}");
 		
 		Vector3 targetVel = new Vector2(h * speed, v * speed) * Time.fixedDeltaTime;
 

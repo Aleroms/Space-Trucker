@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance;
 
-    int currency;
+    public int currency;
 
     public int rewardPerCollectedCargo = 5;
 
