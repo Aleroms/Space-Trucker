@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1900025178913761448}
   - component: {fileID: 3789606164231762337}
   - component: {fileID: 8984950989555605553}
+  - component: {fileID: 6087148148798355110}
   m_Layer: 0
   m_Name: PlayerPrototype
   m_TagString: Player
@@ -98,6 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  damage: 1
+  cargo: {fileID: 0}
 --- !u!114 &5413338326620229462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,7 +114,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.25
+  constantRightSpeed: 0
   inLevelSelector: 0
+  rBody: {fileID: 0}
 --- !u!114 &1900025178913761448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,3 +178,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
+--- !u!114 &6087148148798355110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5413338326620229459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd63ba82307e72740864b5a57cb283d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: {fileID: 0}
+  ratioText: {fileID: 0}

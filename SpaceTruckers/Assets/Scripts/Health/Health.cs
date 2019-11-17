@@ -8,12 +8,14 @@ public class Health : MonoBehaviour
 	public int damage = 1;
 
 	public PlayerCargo cargo;
+	public HealthBar healthBar;
 	
 	void OnCollisionEnter2D(Collision2D other)
 	{
 		if(other.gameObject.tag == "Enemy")
 		{
 			health -= damage;
+			healthBar.TakeDamage(damage);
 			print("health:" + health );
 
 			if (cargo)
