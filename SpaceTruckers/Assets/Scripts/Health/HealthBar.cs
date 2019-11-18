@@ -7,36 +7,32 @@ public class HealthBar : MonoBehaviour
 {
 	public Image currentHealth;
 	public Text ratioText;
+	public Health healthComponent;
 
-	private float maxHealth = 100;
-	private float damage = 100;
+	void OnEnable()
+	{
+		healthComponent.OnTakeDamage += UpdateHealth;
+	}
+
+	void OnDisable()
+	{
+		healthComponent.OnTakeDamage -= UpdateHealth;
+	}
 
 	private void Start()
 	{
 		UpdateHealth();
-		
 	}
-
-	//public void 
 
 	private void UpdateHealth()
 	{
-		float ratio = damage / maxHealth;
+		float ratio = healthComponent.health / healthComponent.maxHealth;
 		if(currentHealth)
 		{
-			currentHealth.rectTransform.localScale = new Vector3(ratio,1.0f,1.0f);
-			ratioText.text = (ratio * 100.0f).ToString("0") + '%';
-
+			currentHealth.fillAmount = ratio;
+			ratioText.text = (ratio * 100).ToString() + "%";
 		}
 	}
 
-	public void TakeDamage(float dmg)
-	{
-		damage -= dmg;
 
-		if (damage < 0)
-			damage = 0;
-
-		UpdateHealth();
-	}
 }

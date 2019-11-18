@@ -4,18 +4,23 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-	public int health = 100;
-	public int damage = 1;
+	public float maxHealth = 100;
+	public float health = 100;
+	public float damage = 1; //if you make an enemy script, move this damage variable over to there
 
 	public PlayerCargo cargo;
-	public HealthBar healthBar;
+
+	public delegate void TakeDamage();
+	public TakeDamage OnTakeDamage;
+
 	
 	void OnCollisionEnter2D(Collision2D other)
 	{
 		if(other.gameObject.tag == "Enemy")
 		{
 			health -= damage;
-			healthBar.TakeDamage(damage);
+			health = Mathf.Clamp(health, 0, Mathf.Infinity);
+			OnTakeDamage();
 			print("health:" + health );
 
 			if (cargo)
@@ -27,15 +32,5 @@ public class Health : MonoBehaviour
 				print("PlayerCargo script reference is null");
 		}
 	}
-	// Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

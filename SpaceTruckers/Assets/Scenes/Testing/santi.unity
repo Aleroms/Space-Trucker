@@ -578,6 +578,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1315236430 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6087148148798355110, guid: ff2c44653062e094cb6b7f1a5144cdac,
+    type: 3}
+  m_PrefabInstance: {fileID: 5413338325980988344}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd63ba82307e72740864b5a57cb283d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1315236434 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5115699524518155770, guid: ff2c44653062e094cb6b7f1a5144cdac,
+    type: 3}
+  m_PrefabInstance: {fileID: 5413338325980988344}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd518e300582e8c4f869b8751c687e7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1401078065
 GameObject:
   m_ObjectHideFlags: 0
@@ -634,10 +658,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 502b8b4826a068b4782628ffd501dff9, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -919,16 +943,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6087148148798355110, guid: ff2c44653062e094cb6b7f1a5144cdac,
-        type: 3}
-      propertyPath: currentHealth
-      value: 
-      objectReference: {fileID: 1401078067}
-    - target: {fileID: 6087148148798355110, guid: ff2c44653062e094cb6b7f1a5144cdac,
-        type: 3}
-      propertyPath: ratioText
-      value: 
-      objectReference: {fileID: 2076923456}
     - target: {fileID: 5413338326620229459, guid: ff2c44653062e094cb6b7f1a5144cdac,
         type: 3}
       propertyPath: m_Name
@@ -1009,6 +1023,21 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 6087148148798355110, guid: ff2c44653062e094cb6b7f1a5144cdac,
+        type: 3}
+      propertyPath: currentHealth
+      value: 
+      objectReference: {fileID: 1401078067}
+    - target: {fileID: 6087148148798355110, guid: ff2c44653062e094cb6b7f1a5144cdac,
+        type: 3}
+      propertyPath: ratioText
+      value: 
+      objectReference: {fileID: 2076923456}
+    - target: {fileID: 6087148148798355110, guid: ff2c44653062e094cb6b7f1a5144cdac,
+        type: 3}
+      propertyPath: healthComponent
+      value: 
+      objectReference: {fileID: 1315236434}
     - target: {fileID: 5413338326620229462, guid: ff2c44653062e094cb6b7f1a5144cdac,
         type: 3}
       propertyPath: rBody
@@ -1019,6 +1048,11 @@ PrefabInstance:
       propertyPath: speed
       value: 800
       objectReference: {fileID: 0}
+    - target: {fileID: 5115699524518155770, guid: ff2c44653062e094cb6b7f1a5144cdac,
+        type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1315236430}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff2c44653062e094cb6b7f1a5144cdac, type: 3}
 --- !u!1001 &8618290415711389634
