@@ -43,3 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38e0f48ecf48444c294037e19d54b7fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currency: 0
+  rewardPerCollectedCargo: 5
