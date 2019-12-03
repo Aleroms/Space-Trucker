@@ -12,16 +12,27 @@ public class Health : MonoBehaviour
 
 	public delegate void TakeDamage();
 	public TakeDamage OnTakeDamage;
+  
+    public GameObject gameOverScreen;
 
-	
-	void OnCollisionEnter2D(Collision2D other)
+
+    private void Start()
+    {
+        gameOverScreen.SetActive(false);
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
 	{
 		if(other.gameObject.tag == "Enemy")
 		{
 			health -= damage;
 			health = Mathf.Clamp(health, 0, Mathf.Infinity);
 			OnTakeDamage();
-			print("health:" + health );
+            if (health == 0)
+            {
+                gameOverScreen.SetActive(true);
+            }
+            print("health:" + health );
 
 			if (cargo)
 			{
