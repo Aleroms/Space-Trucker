@@ -11,12 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu/MainMenu.unity
     guid: 694759a4f8d5f4c19ba47c0effaa26d9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Galaxy.unity
     guid: ea35658a8ffe73e47aa4752595f68bf8
   - enabled: 1
-    path: Assets/Scenes/Levels/Warehouse.unity
-    guid: 0dafbdad0ec0b8a4aa7dd63eb274e7e8
+    path: Assets/Scenes/Levels/al - 3.unity
+    guid: 2c8bf1727558a429a862dfc6e7bdace9
   - enabled: 1
     path: Assets/Scenes/Menu/Credits.unity
     guid: 0696da21783c6194f92cdf23fccbcdba
